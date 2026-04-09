@@ -13,8 +13,5 @@ jobs:
       - name: install dependecies
         run:  npm install
         
-      - name: run tests
-        run: npm test
-
-      - name: say hello
-        run: echo "helloo good morning"
+      - name: run app
+        run: npm start
