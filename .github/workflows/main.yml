@@ -6,6 +6,10 @@ jobs:
   test: 
     runs-on: ubuntu-latest
     steps:
+
+      - name: checkout code
+        run:  action@checkout:v4
+        
       - name: install dependecies
         run:  npm install
         
