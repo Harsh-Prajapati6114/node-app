@@ -14,4 +14,4 @@ jobs:
         run:  npm install
 
       - name: install Docker
-        run: sudo apt update && sudo apt install docker.io -y && sudo usermod -aG docker $user && docker --version
+        run: docker --version
