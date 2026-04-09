@@ -1,0 +1,13 @@
+name: node-app
+
+on: push
+
+jobs:
+  test: 
+    runs-on: ubuntu-latest
+    steps:
+      - name: run tests
+        run: npm test
+
+      - name: say hello
+        run: echo "helloo good morning"
