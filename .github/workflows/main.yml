@@ -6,6 +6,9 @@ jobs:
   test: 
     runs-on: ubuntu-latest
     steps:
+      - name: install dependecies
+        run:  npm install
+        
       - name: run tests
         run: npm test
 
