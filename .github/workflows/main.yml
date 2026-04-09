@@ -3,7 +3,7 @@ name: node-app
 on: push
 
 jobs:
-  test: 
+  build: 
     runs-on: ubuntu-latest
     steps:
 
@@ -12,6 +12,6 @@ jobs:
         
       - name: install dependecies
         run:  npm install
-        
-      - name: run app
-        run: npm start
+
+      - name: install Docker
+        run: sudo apt update && sudo apt install docker.io -y && sudo usermod -aG docker $user && docker --version
