@@ -23,10 +23,10 @@ jobs:
           password: ${{ secrets.DOCKER_PASSWORD }}
 
       - name: build docker image
-        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/pract .
+        run: docker build -t ${{ secrets.DOCKER_USERNAME }}/pract:v${{ github.run_number }} .
 
-      - name: show images
-        run: docker images
+      - name: push docker image to docker hub
+        run: docker push ${{ secrets.DOCKER_USERNAME }}/pract:v${{ github.run_number }}
 
     
       
