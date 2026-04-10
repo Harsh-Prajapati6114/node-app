@@ -34,7 +34,7 @@ jobs:
       - name: aws-credentials
         uses: aws-actions/configure-aws-credentials@v6
         with:
-           role-to-assume: arn:aws:iam::198456344791:role/github-cred
+          role-to-assume: arn:aws:iam::198456344791:role/github-cred
           aws-region: ${{ secrets.AWS_REGION }}
           
 
